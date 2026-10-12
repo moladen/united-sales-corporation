@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+
+/* Palette sampled from the approved logo:
+   wordmark navy #022559 · droplet #013581 → #0276d2 → #05b9fa
+   flame #f57e16 → #fec32a · "CORPORATION" slate #4b5565 */
+@theme {
+  --color-navy-950: #011838;
+  --color-navy-900: #022559;
+  --color-navy-800: #06306c;
+  --color-navy-700: #013581;
+  --color-navy-600: #0a4596;
+  --color-brand-700: #015fae;
+  --color-brand-600: #0276d2;
+  --color-brand-500: #1c8fe3;
+  --color-brand-100: #d9ecfb;
+  --color-brand-50: #eef6fd;
+  --color-cyan-400: #05b9fa;
+  --color-amber-600: #c25a07;
+  --color-amber-500: #f57e16;
+  --color-amber-400: #fa9b24;
+  --color-amber-300: #fec32a;
+  --color-amber-100: #fff0d9;
+  --color-ink: #022559;
+  --color-body: #4b5565;
+  --color-muted: #6b7482;
+  --color-line: #dfe4ec;
+  --color-mist: #f3f6fa;
+  --color-paper: #fafbfc;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  /* wide-tracked label style, echoing "CORPORATION" in the logo */
+  --font-label: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --container-site: 78rem;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      /* list is duplicated, so -50% (plus half the gap) loops seamlessly */
+      transform: translateX(calc(-50% - 0.625rem));
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-body antialiased;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-amber-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-amber-100);
+    color: var(--color-ink);
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-(--container-site) px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section label: wide-tracked caps like "CORPORATION" in the logo,
+     led by a short flame-coloured rule. */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-label text-[0.72rem] font-semibold tracking-[0.24em] text-brand-600 uppercase;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply inline-block h-[2px] w-7 bg-linear-to-r from-amber-500 to-amber-300;
+  }
+
+  .eyebrow-light {
+    @apply text-amber-300;
+  }
+
+  /* Flame gradient (orange → amber), used sparingly for emphasis */
+  .text-flame {
+    @apply bg-linear-to-r from-amber-500 to-amber-300 bg-clip-text text-transparent;
+  }
+
+  /* Droplet gradient rule (deep blue → cyan) */
+  .rule-droplet {
+    @apply bg-linear-to-r from-navy-700 via-brand-600 to-cyan-400;
+  }
+
+  .blueprint-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .blueprint-grid-dark {
+    background-image:
+      linear-gradient(to right, rgb(2 37 89 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(2 37 89 / 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .prose-body p + p {
+    @apply mt-4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
