@@ -4,7 +4,7 @@ import { processSteps } from '@/lib/content';
 
 export default function Process() {
   return (
-    <section aria-labelledby="process-heading" className="blueprint-grid-dark bg-mist py-20 lg:py-28">
+    <section aria-labelledby="process-heading" className="blueprint-grid-dark bg-mist py-16 sm:py-20 lg:py-28">
       <div className="container-site">
         <Reveal>
           <SectionHeading

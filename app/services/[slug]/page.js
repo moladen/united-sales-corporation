@@ -59,7 +59,7 @@ export default async function ServicePage({ params }) {
       </PageHero>
 
       {/* Overview */}
-      <section aria-labelledby="overview-heading" className="py-20 lg:py-24">
+      <section aria-labelledby="overview-heading" className="py-16 sm:py-20 lg:py-24">
         <div className="container-site grid gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-7">
             <p className="eyebrow">Overview</p>
@@ -90,7 +90,7 @@ export default async function ServicePage({ params }) {
       </section>
 
       {/* Scope */}
-      <section aria-labelledby="scope-heading" className="bg-mist py-20 lg:py-24">
+      <section aria-labelledby="scope-heading" className="bg-mist py-16 sm:py-20 lg:py-24">
         <div className="container-site">
           <Reveal>
             <p className="eyebrow">Scope of support</p>
@@ -113,7 +113,7 @@ export default async function ServicePage({ params }) {
       </section>
 
       {/* Focus + enquiry info */}
-      <section aria-labelledby="focus-heading" className="py-20 lg:py-24">
+      <section aria-labelledby="focus-heading" className="py-16 sm:py-20 lg:py-24">
         <div className="container-site grid gap-8 lg:grid-cols-2 lg:gap-12">
           <Reveal className="border-t-[3px] border-navy-900 pt-8">
             <h2 id="focus-heading" className="text-2xl font-bold">
@@ -153,7 +153,7 @@ export default async function ServicePage({ params }) {
       </section>
 
       {/* Related */}
-      <section aria-labelledby="related-heading" className="border-t border-line py-20 lg:py-24">
+      <section aria-labelledby="related-heading" className="border-t border-line py-16 sm:py-20 lg:py-24">
         <div className="container-site">
           <h2 id="related-heading" className="text-2xl font-bold sm:text-[1.75rem]">
             Related services

@@ -7,9 +7,9 @@ import { site } from '@/lib/site';
 
 export default function Intro() {
   return (
-    <section aria-labelledby="intro-heading" className="py-20 lg:py-28">
+    <section aria-labelledby="intro-heading" className="py-16 sm:py-20 lg:py-28">
       <div className="container-site grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-        <Reveal className="order-2 lg:order-1 lg:col-span-5">
+        <Reveal className="order-2 hidden md:block lg:order-1 lg:col-span-5">
           <div className="relative pr-6 pb-6">
             <div aria-hidden="true" className="absolute top-6 right-0 bottom-0 left-6 border border-amber-500/60" />
             <MediaFrame
@@ -45,11 +45,11 @@ export default function Intro() {
             <dl className="mt-8 grid max-w-xl grid-cols-2 border-y border-line">
               <div className="py-5 pr-4">
                 <dt className="font-label font-semibold text-[0.7rem] tracking-[0.2em] text-muted uppercase">Established</dt>
-                <dd className="mt-1.5 font-display text-2xl font-bold text-ink">{site.established}</dd>
+                <dd className="mt-1.5 font-display text-xl font-bold text-ink sm:text-2xl">{site.established}</dd>
               </div>
               <div className="border-l border-line py-5 pl-5">
                 <dt className="font-label font-semibold text-[0.7rem] tracking-[0.2em] text-muted uppercase">Registered in</dt>
-                <dd className="mt-1.5 font-display text-2xl font-bold text-ink">Lucknow, UP</dd>
+                <dd className="mt-1.5 font-display text-xl font-bold text-ink sm:text-2xl">Lucknow, UP</dd>
               </div>
             </dl>
             <div className="mt-8">

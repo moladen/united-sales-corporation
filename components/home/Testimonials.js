@@ -9,7 +9,7 @@ export default function Testimonials() {
   if (!items.length) return null;
 
   return (
-    <section id="testimonials" aria-labelledby="testimonials-heading" className="overflow-hidden bg-white py-20 lg:py-28">
+    <section id="testimonials" aria-labelledby="testimonials-heading" className="overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
       <div className="container-site">
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Client Stories</p>

@@ -10,8 +10,8 @@ export function CapabilityList({ items = projectCapabilities, headingLevel = 'h3
     <ol className="grid gap-px border border-line bg-line md:grid-cols-2">
       {items.map((p, i) => (
         <li key={p.title} className="bg-white">
-          <Reveal delay={(i % 2) * 0.06} className="flex h-full flex-col p-7 lg:p-9">
-            <div className="flex items-center justify-between gap-4">
+          <Reveal delay={(i % 2) * 0.06} className="flex h-full flex-col p-6 sm:p-7 lg:p-9">
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
               <span className="font-label font-semibold text-[0.68rem] tracking-[0.2em] text-brand-600 uppercase">
                 Service capability · {String(i + 1).padStart(2, '0')}
               </span>
@@ -35,7 +35,7 @@ export function CapabilityList({ items = projectCapabilities, headingLevel = 'h3
 
 export default function ProjectExperience() {
   return (
-    <section aria-labelledby="projects-heading" className="py-20 lg:py-28">
+    <section aria-labelledby="projects-heading" className="py-16 sm:py-20 lg:py-28">
       <div className="container-site">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
@@ -62,7 +62,7 @@ export default function ProjectExperience() {
         <Reveal className="mt-10">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-brand-600 hover:text-brand-700"
+            className="inline-flex items-center gap-2 py-1.5 text-[0.9375rem] font-semibold text-brand-600 hover:text-brand-700"
           >
             How we approach project work <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>

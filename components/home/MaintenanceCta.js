@@ -10,7 +10,7 @@ export default function MaintenanceCta() {
       <div className="container-site">
         <Reveal className="relative overflow-hidden border border-line bg-white">
           <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-amber-500" />
-          <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-12 lg:items-center lg:gap-12 lg:p-14">
+          <div className="grid gap-8 p-6 pl-8 sm:p-10 lg:grid-cols-12 lg:items-center lg:gap-12 lg:p-14">
             <div className="lg:col-span-7">
               <p className="eyebrow">Maintenance &amp; AMC</p>
               <h2 id="maintenance-heading" className="mt-4 text-[1.75rem] leading-tight font-bold sm:text-[2.25rem]">
@@ -22,7 +22,7 @@ export default function MaintenanceCta() {
               </p>
             </div>
             <div className="lg:col-span-5">
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-[0.9375rem] text-ink">
+              <ul className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 text-[0.9375rem] text-ink">
                 {items.map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <Check className="h-4 w-4 shrink-0 text-amber-500" aria-hidden="true" />

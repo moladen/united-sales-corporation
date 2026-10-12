@@ -176,7 +176,7 @@ export default function ContactForm({ idPrefix = 'enquiry', emailCopy = false })
             {site.contact.phones[0].display}
           </a>{' '}
           or email{' '}
-          <a href={`mailto:${site.contact.email}`} className="font-medium break-all text-brand-600 hover:underline">
+          <a href={`mailto:${site.contact.email}`} className="font-medium break-words text-brand-600 hover:underline">
             {site.contact.email}
           </a>
           .

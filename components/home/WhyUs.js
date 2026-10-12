@@ -3,7 +3,7 @@ import { strengths } from '@/lib/content';
 
 export default function WhyUs() {
   return (
-    <section aria-labelledby="why-heading" className="py-20 lg:py-28">
+    <section aria-labelledby="why-heading" className="py-16 sm:py-20 lg:py-28">
       <div className="container-site">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-5">

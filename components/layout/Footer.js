@@ -39,25 +39,25 @@ export default function Footer() {
             <p className="mt-6 font-label font-semibold text-[0.7rem] tracking-[0.2em] text-white/45 uppercase">{site.tagline}</p>
           </div>
 
-          <div className="grid gap-10 sm:grid-cols-3 lg:col-span-5">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-5">
             <nav aria-label="Quick links">
               <FooterHeading>Quick links</FooterHeading>
-              <ul className="mt-5 space-y-2.5 text-[0.9rem]">
+              <ul className="mt-4 space-y-1 text-[0.9rem]">
                 {quickLinks.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="transition-colors hover:text-white">
+                    <Link href={l.href} className="inline-block py-1.5 transition-colors hover:text-white">
                       {l.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <nav aria-label="Services" className="sm:col-span-1">
+            <nav aria-label="Services" className="order-last col-span-2 sm:order-none sm:col-span-1">
               <FooterHeading>Services</FooterHeading>
-              <ul className="mt-5 space-y-2.5 text-[0.9rem]">
+              <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1 text-[0.9rem] sm:block sm:space-y-1">
                 {services.map((s) => (
                   <li key={s.slug}>
-                    <Link href={`/services/${s.slug}`} className="transition-colors hover:text-white">
+                    <Link href={`/services/${s.slug}`} className="inline-block py-1.5 transition-colors hover:text-white">
                       {s.navTitle}
                     </Link>
                   </li>
@@ -66,10 +66,10 @@ export default function Footer() {
             </nav>
             <nav aria-label="Industries">
               <FooterHeading>Industries</FooterHeading>
-              <ul className="mt-5 space-y-2.5 text-[0.9rem]">
+              <ul className="mt-4 space-y-1 text-[0.9rem]">
                 {industries.map((i) => (
                   <li key={i.slug}>
-                    <Link href={`/industries#${i.slug}`} className="transition-colors hover:text-white">
+                    <Link href={`/industries#${i.slug}`} className="inline-block py-1.5 transition-colors hover:text-white">
                       {i.title}
                     </Link>
                   </li>
@@ -108,7 +108,7 @@ export default function Footer() {
               </p>
               <p className="flex gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-hidden="true" />
-                <a href={`mailto:${contact.email}`} className="break-all hover:text-white">
+                <a href={`mailto:${contact.email}`} className="break-words hover:text-white">
                   {contact.email}
                 </a>
               </p>
@@ -126,7 +126,7 @@ export default function Footer() {
           <p>
             © <CurrentYear /> {site.name}. All rights reserved.
           </p>
-          <Link href="/privacy-policy" className="hover:text-white">
+          <Link href="/privacy-policy" className="inline-block py-2 hover:text-white">
             Privacy Policy
           </Link>
         </div>

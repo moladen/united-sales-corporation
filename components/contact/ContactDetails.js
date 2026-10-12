@@ -46,7 +46,7 @@ export default function ContactDetails({ headingLevel = 'h3' }) {
           </a>
         </Row>
         <Row icon={Mail} label="Email">
-          <a href={`mailto:${contact.email}`} className="break-all hover:text-amber-400">
+          <a href={`mailto:${contact.email}`} className="break-words hover:text-amber-400">
             {contact.email}
           </a>
         </Row>

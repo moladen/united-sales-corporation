@@ -6,7 +6,7 @@ import ContactDetails from '@/components/contact/ContactDetails';
 
 export default function ContactSection({ id = 'contact', formIdPrefix = 'home-enquiry' }) {
   return (
-    <section id={id} aria-labelledby={`${id}-heading`} className="bg-mist py-20 lg:py-28">
+    <section id={id} aria-labelledby={`${id}-heading`} className="bg-mist py-16 sm:py-20 lg:py-28">
       <div className="container-site">
         <Reveal>
           <SectionHeading

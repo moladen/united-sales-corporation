@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 // Native <details> accordion: keyboard accessible and works without JavaScript.
 export default function Faq() {
   return (
-    <section aria-labelledby="faq-heading" className="py-20 lg:py-28">
+    <section aria-labelledby="faq-heading" className="py-16 sm:py-20 lg:py-28">
       <div className="container-site grid gap-12 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-4">
           <p className="eyebrow">FAQ</p>
@@ -15,7 +15,7 @@ export default function Faq() {
           </h2>
           <p className="mt-5 leading-relaxed">
             Can&apos;t find what you&apos;re looking for? Email{' '}
-            <a href={`mailto:${site.contact.email}`} className="font-medium break-all text-brand-600 hover:underline">
+            <a href={`mailto:${site.contact.email}`} className="font-medium break-words text-brand-600 hover:underline">
               {site.contact.email}
             </a>{' '}
             or call{' '}

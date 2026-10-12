@@ -15,7 +15,7 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_85%_10%,rgb(5_185_250/0.16),transparent_60%)]"
       />
-      <div className="container-site relative grid items-center gap-12 pt-14 pb-16 sm:pt-20 lg:grid-cols-12 lg:gap-10 lg:pt-24 lg:pb-24">
+      <div className="container-site relative grid items-center gap-12 pt-10 pb-12 sm:pt-20 sm:pb-16 lg:grid-cols-12 lg:gap-10 lg:pt-24 lg:pb-24">
         <div className="lg:col-span-7">
           <FadeIn>
             <p className="eyebrow eyebrow-light">Established {site.established} · Lucknow, India</p>
@@ -23,18 +23,18 @@ export default function Hero() {
           <FadeIn delay={0.08}>
             <h1
               id="hero-heading"
-              className="mt-6 text-[2.35rem] leading-[1.06] font-extrabold text-white sm:text-5xl lg:text-[3.6rem] xl:text-[4rem]"
+              className="mt-5 text-[2.2rem] leading-[1.08] sm:mt-6 font-extrabold text-white sm:text-5xl lg:text-[3.6rem] xl:text-[4rem]"
             >
               Engineering Solutions for Commercial Spaces That <span className="text-flame">Demand More.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.16}>
-            <p className="mt-7 max-w-2xl text-[1.0625rem] leading-relaxed text-white/75 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-[1.0625rem] sm:mt-7 leading-relaxed text-white/75 sm:text-lg">
               United Sales Corporation delivers integrated engineering and building-service support across HVAC, fire
               protection, fire alarm systems, MEP coordination, civil works, retail fit-outs, and maintenance.
             </p>
           </FadeIn>
-          <FadeIn delay={0.24} className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <FadeIn delay={0.24} className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
             <Button href="/contact#enquiry">
               Request a Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -43,9 +43,19 @@ export default function Hero() {
               Explore Our Services
             </Button>
           </FadeIn>
+          <FadeIn delay={0.3} className="mt-9 lg:hidden">
+            <p className="font-label text-[0.68rem] font-semibold tracking-[0.2em] text-white/50 uppercase">Building services</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {disciplines.map((d) => (
+                <li key={d} className="border border-white/15 bg-white/5 px-3 py-1.5 text-[0.8125rem] font-medium text-white/85">
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
         </div>
 
-        <FadeIn delay={0.2} className="lg:col-span-5">
+        <FadeIn delay={0.2} className="hidden lg:col-span-5 lg:block">
           <div className="relative">
             {/* drafting corner marks */}
             <span aria-hidden="true" className="absolute -top-2 -left-2 h-6 w-6 border-t-2 border-l-2 border-amber-500" />
@@ -81,8 +91,8 @@ export default function Hero() {
           {site.focusAreas.map((area, i) => (
             <li
               key={area}
-              className={`flex items-center gap-3 py-5 text-[0.8125rem] font-semibold tracking-[0.08em] text-white/80 uppercase sm:text-[0.875rem] ${
-                i % 2 === 1 ? 'pl-4 sm:pl-6' : ''
+              className={`flex items-center gap-2.5 py-4 text-[0.75rem] font-semibold tracking-[0.06em] text-white/80 uppercase sm:gap-3 sm:py-5 sm:text-[0.875rem] sm:tracking-[0.08em] ${
+                i % 2 === 1 ? 'border-l border-white/10 pl-4 sm:pl-6' : ''
               } ${i > 0 ? 'lg:border-l lg:border-white/10 lg:pl-6' : ''} ${i < 2 ? 'border-b border-white/10 lg:border-b-0' : ''}`}
             >
               <span className="h-1.5 w-1.5 shrink-0 bg-amber-500" aria-hidden="true" />

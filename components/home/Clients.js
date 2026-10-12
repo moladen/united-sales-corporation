@@ -16,6 +16,7 @@ function LogoTile({ logo, hidden = false, className = '' }) {
           fill
           sizes="220px"
           unoptimized={logo.svg}
+          loading="eager"
           className="object-contain"
         />
       </span>
@@ -54,7 +55,7 @@ export default function Clients() {
   const rows = twoRows ? [logos.filter((_, i) => i % 2 === 0), logos.filter((_, i) => i % 2 === 1)] : [logos];
 
   return (
-    <section id="clients" aria-labelledby="clients-heading" className="blueprint-grid-dark overflow-hidden bg-brand-50 py-20 lg:py-28">
+    <section id="clients" aria-labelledby="clients-heading" className="blueprint-grid-dark overflow-hidden bg-brand-50 py-16 sm:py-20 lg:py-28">
       <div className="container-site">
         <Reveal>
           <SectionHeading

@@ -316,7 +316,7 @@ export default function Header({ logo }) {
                 >
                   <WhatsAppIcon className="h-4 w-4 text-[#128C7E]" /> WhatsApp {site.contact.whatsapp.display}
                 </a>
-                <a href={`mailto:${site.contact.email}`} className="flex items-center gap-3 py-1 break-all text-body">
+                <a href={`mailto:${site.contact.email}`} className="flex items-center gap-3 py-1 break-words text-body">
                   <Mail className="h-4 w-4 shrink-0 text-brand-600" aria-hidden="true" /> {site.contact.email}
                 </a>
               </div>

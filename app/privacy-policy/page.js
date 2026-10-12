@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-xl font-bold sm:text-[1.375rem]">Contact</h2>
               <p className="mt-3 leading-relaxed">
                 For privacy questions or requests, email{' '}
-                <a href={`mailto:${site.contact.email}`} className="font-medium break-all text-brand-600 hover:underline">
+                <a href={`mailto:${site.contact.email}`} className="font-medium break-words text-brand-600 hover:underline">
                   {site.contact.email}
                 </a>{' '}
                 or call{' '}

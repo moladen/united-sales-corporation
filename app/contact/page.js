@@ -34,7 +34,7 @@ export default function ContactPage() {
         art="consult"
       >
         <div className="mt-8 flex flex-col gap-4 text-[0.9375rem] sm:flex-row sm:flex-wrap sm:gap-x-8">
-          <a href={`tel:${primary.tel}`} className="inline-flex items-center gap-2.5 text-white hover:text-amber-400">
+          <a href={`tel:${primary.tel}`} className="inline-flex items-center gap-2.5 py-1 text-white hover:text-amber-400">
             <Phone className="h-4 w-4 text-amber-400" aria-hidden="true" />
             {primary.display}
           </a>
@@ -42,12 +42,12 @@ export default function ContactPage() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 text-white hover:text-amber-400"
+            className="inline-flex items-center gap-2.5 py-1 text-white hover:text-amber-400"
           >
             <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
             WhatsApp {site.contact.whatsapp.display}
           </a>
-          <a href={`mailto:${site.contact.email}`} className="inline-flex items-center gap-2.5 break-all text-white hover:text-amber-400">
+          <a href={`mailto:${site.contact.email}`} className="inline-flex items-center gap-2.5 py-1 break-words text-white hover:text-amber-400">
             <Mail className="h-4 w-4 shrink-0 text-amber-400" aria-hidden="true" />
             {site.contact.email}
           </a>
@@ -68,7 +68,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section aria-labelledby="next-heading" className="py-20 lg:py-24">
+      <section aria-labelledby="next-heading" className="py-16 sm:py-20 lg:py-24">
         <div className="container-site">
           <Reveal>
             <p className="eyebrow">After you get in touch</p>

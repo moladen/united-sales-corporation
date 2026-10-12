@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         art="execution"
       />
 
-      <section aria-labelledby="capabilities-heading" className="py-20 lg:py-28">
+      <section aria-labelledby="capabilities-heading" className="py-16 sm:py-20 lg:py-28">
         <div className="container-site">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <Reveal className="lg:col-span-7">
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
 
       <Clients />
 
-      <section aria-labelledby="docs-heading" className="border-t border-line py-20 lg:py-24">
+      <section aria-labelledby="docs-heading" className="border-t border-line py-16 sm:py-20 lg:py-24">
         <div className="container-site grid gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <SectionHeading

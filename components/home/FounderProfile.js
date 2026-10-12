@@ -43,7 +43,7 @@ export default function FounderProfile({ headingLevel = 'h2' }) {
   const Heading = headingLevel;
 
   return (
-    <section aria-labelledby="founder-heading" className="bg-mist py-20 lg:py-28">
+    <section aria-labelledby="founder-heading" className="bg-mist py-16 sm:py-20 lg:py-28">
       <div className="container-site grid gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
         {/* Left: photograph */}
         <Reveal className="lg:col-span-4">
@@ -68,7 +68,7 @@ export default function FounderProfile({ headingLevel = 'h2' }) {
             <Heading id="founder-heading" className="mt-4 text-[1.875rem] leading-[1.12] font-bold sm:text-4xl lg:text-[2.75rem]">
               About the Founder
             </Heading>
-            <dl className="mt-8 grid border-y border-line sm:grid-cols-3">
+            <dl className="mt-8 hidden border-y border-line sm:grid sm:grid-cols-3">
               <div className="py-4 sm:pr-4">
                 <dt className="font-label font-semibold text-[0.68rem] tracking-[0.2em] text-muted uppercase">Name</dt>
                 <dd className="mt-1 font-semibold text-ink">{founder.name}</dd>
@@ -98,7 +98,7 @@ export default function FounderProfile({ headingLevel = 'h2' }) {
           </Reveal>
 
           <Reveal delay={0.06}>
-            <p className="my-9 max-w-3xl border-l-[3px] border-amber-500 py-1 pl-6 font-display text-[1.2rem] leading-snug font-semibold text-ink sm:text-[1.4rem]">
+            <p className="my-8 max-w-3xl border-l-[3px] border-amber-500 py-1 pl-4 sm:my-9 sm:pl-6 font-display text-[1.05rem] leading-snug font-semibold text-ink sm:text-[1.4rem]">
               Known for his determination, practical understanding, and distinctive leadership style, Mr. Akram believes
               that success is not achieved overnight but through consistency, accountability, teamwork, and the courage
               to take on new challenges.

@@ -23,7 +23,7 @@ export default function Industries() {
               </p>
               <Link
                 href="/industries"
-                className="mt-8 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-amber-400 hover:text-amber-500"
+                className="mt-8 inline-flex items-center gap-2 py-1.5 text-[0.9375rem] font-semibold text-amber-400 hover:text-amber-500"
               >
                 Explore industries <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>

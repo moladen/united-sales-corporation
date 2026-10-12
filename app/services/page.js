@@ -49,7 +49,7 @@ export default function ServicesPage() {
         art="mep"
       />
 
-      <section aria-labelledby="service-groups" className="py-20 lg:py-28">
+      <section aria-labelledby="service-groups" className="py-16 sm:py-20 lg:py-28">
         <div className="container-site">
           <h2 id="service-groups" className="sr-only">
             Services by discipline
@@ -79,7 +79,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section aria-labelledby="combined-heading" className="border-t border-line py-20 lg:py-24">
+      <section aria-labelledby="combined-heading" className="border-t border-line py-16 sm:py-20 lg:py-24">
         <div className="container-site grid gap-10 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <SectionHeading

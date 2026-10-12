@@ -52,7 +52,7 @@ export default function AboutPage() {
         art="building"
       />
 
-      <section aria-labelledby="story-heading" className="py-20 lg:py-28">
+      <section aria-labelledby="story-heading" className="py-16 sm:py-20 lg:py-28">
         <div className="container-site grid gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-7">
             <p className="eyebrow">Our company</p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
       <FounderProfile />
       <WhyUs />
 
-      <section aria-labelledby="capabilities-heading" className="border-t border-line py-20 lg:py-24">
+      <section aria-labelledby="capabilities-heading" className="border-t border-line py-16 sm:py-20 lg:py-24">
         <div className="container-site grid gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">
             <h2 id="capabilities-heading" className="text-[1.75rem] leading-tight font-bold sm:text-[2.1rem]">
